@@ -94,3 +94,24 @@ document.addEventListener('DOMContentLoaded', () => {
         emailInput.addEventListener('input', handleInput);
     }
 });
+
+
+
+
+
+document.addEventListener('DOMContentLoaded', () => {
+    const emailInput = document.querySelector('.email-input');
+    const footerBg = document.querySelector('.footer-bg');
+
+    if (emailInput && footerBg) {
+        // Fokus bo'lganda BLUR classini qo'shish
+        emailInput.addEventListener('focus', () => {
+            footerBg.classList.add('blurred');
+        });
+
+        // Fokusdan chiqqanda BLUR classini olib tashlash
+        emailInput.addEventListener('blur', () => {
+            footerBg.classList.remove('blurred');
+        });
+    }
+});

@@ -9,18 +9,19 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 </head>
 
 <body>
     <nav class="navigation">
         <div class="container">
             <div class="navigation__container">
-                <div class="logos"><a class="logo" href="#">Escape.</a></div>
+                <div class="logos"><a class="logo" href="#"data-aos="zoom-in-up"data-aos-duration="1500">Escape.</a></div>
                 <ul class="nav__links">
-                    <li><a href="#home">Home</a></li>
-                    <li><a href="#categories">Categories</a></li>
-                    <li><a href="#about">About</a></li>
-                    <li><a href="#contact">Contact</a></li>
+                    <li><a href="#home" data-aos="zoom-in-up"data-aos-duration="1500">Home</a></li>
+                    <li><a href="#categories" data-aos="zoom-in-up"data-aos-duration="1500">Categories</a></li>
+                    <li><a href="#about" data-aos="zoom-in-up"data-aos-duration="1500">About</a></li>
+                    <li><a href="#contact" data-aos="zoom-in-up"data-aos-duration="1500">Contact</a></li>
                 </ul>
                 <div class="menu__icon">
                     <span></span>
@@ -53,9 +54,9 @@
         <div class="swiper-button-next hero__next"></div>
 
         <div class="content" id="home">
-            <h1 id="hero-title">Let's do it together.</h1>
-            <div class="line"></div>
-            <p id="hero-text">We travel the world in search of stories. Come along for the ride.</p>
+            <h1 id="hero-title"data-aos="fade-down-right"data-aos-duration="1500">Let's do it together.</h1>
+            <div class="line"data-aos="fade-up-right"data-aos-duration="1500"></div>
+            <p id="hero-text"data-aos="fade-down"data-aos-duration="1500">We travel the world in search of stories. Come along for the ride.</p>
             <button id="hero-btn">View Latest Posts</button>
         </div>
     </section>
@@ -87,7 +88,7 @@
                 <div class="section__container">
                     <h2>Featured Posts</h2>
                     <div class="cards">
-                        <div class="card">
+                        <div class="card" data-aos="zoom-in-up"data-aos-duration="1500">
                             <div class="card-image">
                                 <img src="./img/image  (1).svg" alt="photo">
                                 <div class="overlay">
@@ -104,7 +105,7 @@
                             </div>
                         </div>
 
-                        <div class="card">
+                        <div class="card"data-aos="zoom-in-up"data-aos-duration="1500">
                             <div class="card-image">
                                 <img src="./img/image  (2).svg" alt="photo">
                                 <div class="overlay">
@@ -132,7 +133,7 @@
                     <div class="recent">
 
                         <!-- 🔹 6 ta card -->
-                        <div class="recent__card">
+                        <div class="recent__card"data-aos="zoom-in-down"data-aos-duration="1000">
                             <div class="card__image swiper">
                                 <div class="swiper-wrapper">
                                     <div class="swiper-slide"><img src="./img/image  (3).svg" alt="photo"></div>
@@ -159,7 +160,7 @@
                         </div>
 
                         <!-- 🔹 qolgan 5 ta kartani shu strukturada ko‘paytirasan -->
-                        <div class="recent__card">
+                        <div class="recent__card"data-aos="zoom-in-down"data-aos-duration="1000">
                             <div class="card__image swiper">
                                 <div class="swiper-wrapper">
                                     <div class="swiper-slide"><img src="./img/image  (3).svg" alt="photo"></div>
@@ -185,7 +186,7 @@
 
 
                         <!-- shu tarzda jami 6 ta bo‘ladi -->
-                        <div class="recent__card">
+                        <div class="recent__card"data-aos="zoom-in-down"data-aos-duration="1000">
                             <div class="card__image swiper">
                                 <div class="swiper-wrapper">
                                     <div class="swiper-slide"><img src="./img/image  (4).svg" alt="photo"></div>
@@ -208,7 +209,7 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="recent__card">
+                        <div class="recent__card"data-aos="zoom-in-down"data-aos-duration="1500">
                             <div class="card__image swiper">
                                 <div class="swiper-wrapper">
                                     <div class="swiper-slide"><img src="./img/image  (5).svg" alt="photo"></div>
@@ -231,7 +232,7 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="recent__card">
+                        <div class="recent__card"data-aos="zoom-in-down"data-aos-duration="1500">
                             <div class="card__image swiper">
                                 <div class="swiper-wrapper">
                                     <div class="swiper-slide"><img src="./img/image  (7).svg" alt="photo"></div>
@@ -256,7 +257,7 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="recent__card">
+                        <div class="recent__card"data-aos="zoom-in-down"data-aos-duration="1500">
                             <div class="card__image swiper">
                                 <div class="swiper-wrapper">
                                     <div class="swiper-slide"><img src="./img/image  (8).svg" alt="photo"></div>
@@ -284,37 +285,46 @@
             </div>
         </section>
     </main>
-   <footer class="footer" id="main-footer">
-    <div class="footer-bg"></div> <div class="container">
-        <div class="footer__container">
-            <article class="contact">
-                <h3>Stay in Touch</h3>
-                <div class="line"></div>
-                <form action="#" class="email-form"> <div class="input-group"> <label for="email">Enter your email address</label>
-                        <input type="email" id="email" class="email-input">
-                    </div>
-                    <button type="submit" class="submit-btn">Submit</button> </form>
-            </article>
-            <footer>
-                <nav class="footernav" id="contact">
-                    <div class="container">
-                        <div class="footernav__container">
-                            <div class="logos"><a class="logo" href="#">Escape.</a></div>
-                            <ul class="nav__links">
-                                <li><a href="#home">Home</a></li>
-                                <li><a href="#categories">Categories</a></li>
-                                <li><a href="#about">About</a></li>
-                                <li><a href="#contact">Contact</a></li>
-                            </ul>
+    <footer class="footer" id="main-footer">
+        <div class="footer-bg"></div>
+        <div class="container">
+            <div class="footer__container">
+                <article class="contact">
+                    <h3 data-aos="zoom-out-down"data-aos-duration="1000">Stay in Touch</h3>
+                    <div class="line"></div>
+                    <form action="#" class="email-form"data-aos="zoom-in-down"data-aos-duration="1500">
+                        <div class="input-group"> 
+                            <label for="email">Enter your email address</label>
+                            <input type="email" id="email" class="email-input">
                         </div>
-                    </div>
-                </nav>
-            </footer>
+                        <button type="submit" class="submit-btn">Submit</button>
+                    </form>
+                </article>
+                <footer>
+                    <nav class="footernav" id="contact"data-aos="zoom-in-up"data-aos-duration="1000">
+                        <div class="container">
+                            <div class="footernav__container">
+                                <div class="logos"><a class="logo" href="#">Escape.</a></div>
+                                <ul class="nav__links">
+                                    <li><a href="#home">Home</a></li>
+                                    <li><a href="#categories">Categories</a></li>
+                                    <li><a href="#about">About</a></li>
+                                    <li><a href="#contact">Contact</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </nav>
+                </footer>
+            </div>
         </div>
-    </div>
-</footer>
+    </footer>
 
     <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
     <script src="./js/main.js"></script>
 </body>
+
 </html>

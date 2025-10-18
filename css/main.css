@@ -563,15 +563,15 @@ button:hover {
 .swiper-button-prev::after,
 .swiper-button-next::after {
     content: ''; /* Tugmaning ichki kontentini saqlash */
-    font-size: 20px; /* Masalan, 20px gacha kattalashtiramiz */
+    font-size: 15px !important; /* Masalan, 20px gacha kattalashtiramiz */
     /* Agar bu ishlamasa, tugmaning o'ziga padding berish kerak: */
 }
 
 /* 💡 Alternativ: Tugmaning urish joyini (hit area) kattalashtirish */
 .swiper-button-prev,
 .swiper-button-next {
-    width: 30px; /* Tugma uchun ko'proq joy ochish */
-    height: 30px;
+    width: 15px; /* Tugma uchun ko'proq joy ochish */
+    height: 15px;
     margin: -15px 0 0 0; /* Vertikal joylashuvini markazga qaytarish uchun */
     top: 50%;
 }

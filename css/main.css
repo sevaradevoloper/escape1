@@ -1,70 +1,77 @@
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+    margin         : 0;
+    padding        : 0;
+    box-sizing     : border-box;
     text-decoration: none;
-    list-style: none;
+    list-style     : none;
 }
 
 body {
     font-family: 'Poppins', sans-serif;
-    color: #FFFFFF;
+    color      : #FFFFFF;
 }
 
 .container {
     max-width: 1200px;
-    margin: 0 auto;
-    padding: 20px 0px;
+    margin   : 0 auto;
+    padding  : 20px 0px;
 }
 
 /* 🔹 Navbar */
 .navigation {
-    position: fixed;
-    top: 0;
-    width: 100%;
-    padding: 20px 60px;
-    background: rgba(0, 0, 0, 0.4);
+    position       : fixed;
+    top            : 0;
+    width          : 100%;
+    padding        : 20px 60px;
+    background     : rgba(0, 0, 0, 0.4);
     backdrop-filter: blur(10px);
-    z-index: 20;
+    z-index        : 20;
 }
 
 .navigation__container {
-    display: flex;
+    display        : flex;
     justify-content: space-between;
-    align-items: center;
-    width: 100%;
+    align-items    : center;
+    width          : 100%;
 }
 
 .logos {
-    display: flex;
+    display    : flex;
     align-items: center;
 }
 
 .logo {
-    font-size: 32px;
+    font-size  : 32px;
     font-weight: 600;
-    color: #DD783F;
+    color      : #DD783F;
 }
 
 .nav__links {
     display: flex;
-    gap: 50px;
+    gap    : 50px;
 }
 
 .nav__links a {
-    color: white;
-    position: relative;
-    font-weight: 500;
-    transition: color 0.3s;
+    color         : white;
+    position      : relative;
+    transition    : color 0.3s;
+    font-family   : Oxygen;
+    font-weight   : 400;
+    font-style    : Regular;
+    font-size     : 16px;
+    line-height   : 20px;
+    letter-spacing: 0.6px;
+    text-transform: uppercase;
+
 }
 
 .nav__links a::after {
-    content: "";
-    position: absolute;
-    width: 0;
-    height: 2px;
-    bottom: -4px;
-    left: 0;
+    content   : "";
+    position  : absolute;
+    width     : 0;
+    height    : 2px;
+    bottom    : -4px;
+    left      : 0;
     background: #DD783F;
     transition: width 0.3s;
 }
@@ -75,19 +82,19 @@ body {
 
 /* 🔹 MENU ICON & SIDEBAR */
 .menu__icon {
-    display: none;
+    display       : none;
     flex-direction: column;
-    cursor: pointer;
-    gap: 5px;
+    cursor        : pointer;
+    gap           : 5px;
 }
 
 .menu__icon span {
-    display: block;
-    width: 25px;
-    height: 3px;
-    background: white;
+    display      : block;
+    width        : 25px;
+    height       : 3px;
+    background   : white;
     border-radius: 10px;
-    transition: all 0.3s;
+    transition   : all 0.3s;
 }
 
 .menu__icon.active span:nth-child(1) {
@@ -103,16 +110,16 @@ body {
 }
 
 .sidebar {
-    position: fixed;
-    top: 0;
-    right: -100%;
-    width: 60%;
-    height: 100%;
-    background: rgba(0, 0, 0, 0.9);
+    position       : fixed;
+    top            : 0;
+    right          : -100%;
+    width          : 60%;
+    height         : 100%;
+    background     : rgba(0, 0, 0, 0.9);
     backdrop-filter: blur(10px);
-    transition: 0.4s ease;
-    z-index: 30;
-    padding-top: 80px;
+    transition     : 0.4s ease;
+    z-index        : 30;
+    padding-top    : 80px;
 }
 
 .sidebar.active {
@@ -120,90 +127,90 @@ body {
 }
 
 .sidebar .close {
-    position: absolute;
-    top: 20px;
-    right: 25px;
+    position : absolute;
+    top      : 20px;
+    right    : 25px;
     font-size: 40px;
-    color: #DD783F;
-    cursor: pointer;
+    color    : #DD783F;
+    cursor   : pointer;
 }
 
 .sidebar ul {
-    display: flex;
+    display       : flex;
     flex-direction: column;
-    align-items: center;
-    gap: 25px;
+    align-items   : center;
+    gap           : 25px;
 }
 
 .sidebar ul a {
-    color: white;
+    color    : white;
     font-size: 1.2rem;
-    position: relative;
+    position : relative;
 }
 
 /* 🔹 Hero SLIDER */
 .hero {
-    position: relative;
-    height: 100vh;
-    max-height: 850px;
-    overflow: hidden;
-    display: flex;
+    position       : relative;
+    height         : 100vh;
+    max-height     : 850px;
+    overflow       : hidden;
+    display        : flex;
     justify-content: center;
-    align-items: center;
-    text-align: center;
-    z-index: 1;
+    align-items    : center;
+    text-align     : center;
+    z-index        : 1;
 }
 
 .hero .swiper-slide img {
-    width: 100%;
-    height: 100vh;
+    width     : 100%;
+    height    : 100vh;
     max-height: 850px;
     object-fit: cover;
-    filter: brightness(0.6);
+    filter    : brightness(0.6);
 }
 
 .hero .content {
-    position: absolute;
-    top: 50%;
-    left: 50%;
+    position : absolute;
+    top      : 50%;
+    left     : 50%;
     transform: translate(-50%, -50%);
-    z-index: 10;
-    width: 90%;
+    z-index  : 10;
+    width    : 90%;
     max-width: 600px;
 }
 
 .content h1 {
-    font-size: 68px;
-    font-weight: 700;
-    line-height: 1.2;
+    font-size    : 68px;
+    font-weight  : 700;
+    line-height  : 1.2;
     margin-bottom: 22px;
 }
 
 .content p {
-    font-size: 24px;
-    font-weight: 400;
+    font-size    : 24px;
+    font-weight  : 400;
     margin-bottom: 40px;
 }
 
 .line {
-    width: 120px;
-    height: 2px;
+    width     : 120px;
+    height    : 2px;
     background: rgba(255, 255, 255, 0.4);
-    margin: 15px auto 25px auto;
+    margin    : 15px auto 25px auto;
 }
 
 /* 🔹 Hero SLIDER Navigatsiya Tugmalari */
 .hero .swiper-button-prev,
 .hero .swiper-button-next {
-    width: 44px;
-    height: 44px;
+    width        : 30px;
+    height       : 30px;
     border-radius: 50%;
-    background: rgba(0, 0, 0, 0.4);
-    color: #fff;
-    top: 50%;
-    transform: translateY(-50%);
-    z-index: 15;
-    transition: background 0.3s ease;
+    background   : rgba(0, 0, 0, 0.4);
+    color        : #fff;
+    top          : 50%;
+    transform    : translateY(-50%);
+    z-index      : 15;
+    transition   : background 0.3s ease;
 }
 
 .hero .swiper-button-prev::after,
@@ -285,61 +292,63 @@ button:hover {
 }
 
 .scrolling-text {
-  overflow: hidden;
-  white-space: nowrap;
-  background: #fff;
-  padding: 20px 0;
+    overflow   : hidden;
+    white-space: nowrap;
+    background : #fff;
+    padding    : 20px 0;
 }
 
 .scroll-content {
-  display: inline-block;
-  animation: scrollLeft 25s linear infinite;
+    display  : inline-block;
+    animation: scrollLeft 25s linear infinite;
 }
 
 @keyframes scrollLeft {
-  from {
-    transform: translateX(0);
-  }
-  to {
-    transform: translateX(-50%);
-  }
+    from {
+        transform: translateX(0);
+    }
+
+    to {
+        transform: translateX(-50%);
+    }
 }
 
 .scrolling-text a {
-  position: relative;
-  margin-right: 40px;
-  color: #768088;
-  font-size: 20px;
-  text-decoration: none;
-  transition: color 0.3s ease, transform 0.3s ease;
+    position       : relative;
+    margin-right   : 40px;
+    color          : #768088;
+    font-size      : 20px;
+    text-decoration: none;
+    transition     : color 0.3s ease, transform 0.3s ease;
 }
 
 .scrolling-text a::after {
-  content: "";
-  position: absolute;
-  left: 0;
-  bottom: -5px;
-  width: 0;
-  height: 2px;
-  background: #DD783F;
-  transition: all 0.3s ease;
+    content   : "";
+    position  : absolute;
+    left      : 0;
+    bottom    : -5px;
+    width     : 0;
+    height    : 2px;
+    background: #DD783F;
+    transition: all 0.3s ease;
 }
 
 /* Hover paytida faqat rang o‘zgaradi */
 .scrolling-text a:hover {
-  color: #DD783F;
+    color: #DD783F;
 }
 
 /* 🔹 Bosilganda (active) effekt */
 .scrolling-text a:active {
-  transform: translateY(-3px) scale(1.1); /* tepaga chiqib biroz kattalashadi */
-  color: #DD783F;
+    transform: translateY(-3px) scale(1.1);
+    /* tepaga chiqib biroz kattalashadi */
+    color    : #DD783F;
 }
 
 .scrolling-text a:active::after {
-  width: 100%;
-  bottom: 0; 
-  height: 3px;
+    width : 100%;
+    bottom: 0;
+    height: 3px;
 }
 
 
@@ -355,7 +364,7 @@ button:hover {
     justify-content: center;
     padding        : 60px 0;
     /* yuqori-pastdan joy */
-    flex-direction: column;
+    flex-direction : column;
 }
 
 .section {
@@ -518,83 +527,344 @@ button:hover {
 
 
 .recent {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 30px;
-  justify-content: center;
+    display        : flex;
+    flex-wrap      : wrap;
+    gap            : 30px;
+    justify-content: center;
 }
 
 .recent__card {
-  width: 300px;
-  border-radius: 10px;
-  overflow: hidden;
-  position: relative;
+    width        : 300px;
+    border-radius: 10px;
+    overflow     : hidden;
+    position     : relative;
 }
 
 .card__image {
-  position: relative;
+    position: relative;
 }
 
 .card__image img {
-  width: 100%;
-  height: 200px;
-  object-fit: cover;
-  border-radius: 10px;
+    width        : 100%;
+    height       : 200px;
+    object-fit   : cover;
+    border-radius: 10px;
 }
 
 /* swiper tugmalari */
 .swiper-button-prev,
 .swiper-button-next {
-  color: #DD783F;
-  transition: 0.3s ease;
+    color     : #DD783F;
+    transition: 0.3s ease;
 }
 
 .swiper-button-prev:hover,
 .swiper-button-next:hover {
-  color: #ff9658;
+    color: #ff9658;
 }
 
 .testimon {
-  background: white;
-  color: #2E2E2E;
-  padding: 20px;
-  text-align: left;
+    background: white;
+    color     : #2E2E2E;
+    padding   : 20px;
+    text-align: left;
 }
 
 .testimon h3 {
-  font-size: 18px;
-  color: #DD783F;
+    font-size: 18px;
+    color    : #DD783F;
 }
 
 .testimon p {
-  margin: 10px 0;
-  font-size: 15px;
-  color: #555;
+    margin   : 10px 0;
+    font-size: 15px;
+    color    : #555;
 }
 
 .day-person {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
+    display        : flex;
+    align-items    : center;
+    justify-content: space-between;
 }
 
 .person {
-  display: flex;
-  align-items: center;
-  gap: 8px;
+    display    : flex;
+    align-items: center;
+    gap        : 8px;
 }
 
 .person img {
-  width: 26px;
-  height: 26px;
-  border-radius: 50%;
-  border: 2px solid #DD783F;
+    width        : 26px;
+    height       : 26px;
+    border-radius: 50%;
+    border       : 2px solid #DD783F;
+}
+
+.testimonials {
+    margin-top: 50px;
+}
+
+.testimonials__container h2 {
+    font-family   : 'Oxygen', sans-serif;
+    font-weight   : 400;
+    font-size     : 22px;
+    letter-spacing: 2px;
+    text-align    : center;
+    color         : #2E2E2E;
+    margin        : 40px 0;
+    padding-bottom: 6px;
+    position      : relative;
+    text-transform: uppercase;
+    overflow      : hidden;
 }
 
 
+/* chiroyli pastki chiziq effekti */
+.testimonials__container h2::after {
+    content   : "";
+    position  : absolute;
+    bottom    : 0;
+    left      : 50%;
+    width     : 0;
+    height    : 2px;
+    background: #DD783F;
+    transition: all 0.4s ease;
+    transform : translateX(-50%);
+}
+
+.testimonials__container h2:hover::after {
+    width: 30%;
+}
+
+/* =================================== */
+/* FOOTER STYLES & RESPONSIVENESS */
+/* =================================== */
+
+.footer {
+    position: relative;
+    padding: 100px 0 50px;
+    overflow: hidden;
+    color: #fff;
+    z-index: 1;
+}
+
+/* Fon rasmi uchun qatlam va unga ulanish */
+.footer-bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    /* !!! Rasm yo'lini to'g'rilang. Masalan: url('../img/footer-bg.jpg') */
+    background: url('../img/footer-bg.jpg') no-repeat center center/cover;
+    transition: filter 0.4s ease-in-out; /* Blur animatsiyasi */
+    z-index: -1;
+}
+
+/* Input fokuslanganda qo'shiladigan BLUR effekti */
+.footer-bg.blurred {
+    filter: blur(8px) brightness(0.7); /* Blur darajasi va qoraytirish */
+}
+
+.footer__container {
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+    position: relative;
+    z-index: 2;
+}
+
+/* STAY IN TOUCH qismi */
+.contact {
+    text-align: center;
+}
+
+.contact h3 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+}
+
+.contact .line {
+    width: 80px;
+    height: 3px;
+    background-color: #ff6f61; /* Chiziq rangini ajratish */
+    margin: 0 auto 30px;
+}
+
+/* Input va Submitni yonma-yon joylash */
+.email-form {
+    display: flex;
+    flex-direction: column; /* Kichik ekranlarda ustma-ust */
+    align-items: center;
+    gap: 15px;
+}
+
+@media (min-width: 600px) {
+    .email-form {
+        flex-direction: row; /* Katta ekranlar uchun yonma-yon */
+        justify-content: center;
+    }
+}
+
+/* Label animatsiyasi uchun input group */
+.input-group {
+    position: relative;
+    width: 100%;
+    max-width: 300px;
+    height: 50px;
+}
+
+.input-group label {
+    position: absolute;
+    top: 50%;
+    left: 15px;
+    transform: translateY(-50%);
+    color: rgba(255, 255, 255, 0.7);
+    transition: all 0.3s ease;
+    pointer-events: none; /* Labelni bosmaslik uchun */
+    z-index: 10;
+}
+
+.email-input {
+    width: 100%;
+    padding: 15px;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    border-radius: 5px;
+    background-color: rgba(0, 0, 0, 0.3); /* Yengil qora fon */
+    color: #fff;
+    font-size: 1rem;
+    outline: none;
+    height: 100%;
+}
+
+.email-input:focus {
+    border-color: #ff6f61; /* Fokuslanganda chegara rangi */
+}
+
+/* Labelni tepaga chiqarish animatsiyasi */
+.email-input:focus + label,
+.email-input:not(:placeholder-shown) + label {
+    top: 0;
+    left: 10px;
+    font-size: 0.8rem;
+    transform: translateY(-50%); 
+    padding: 0 5px;
+    background-color: #222; /* Fon rangiga mos fon qo'yish */
+    border-radius: 3px;
+}
 
 
+/* Submit tugmasi */
+.submit-btn {
+    padding: 15px 30px;
+    background-color: #ff6f61;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background-color 0.3s ease, transform 0.1s ease-out;
+    min-width: 120px;
+}
 
+.submit-btn:hover {
+    background-color: #e55a4d;
+}
+
+.submit-btn:active {
+    transform: scale(0.95); /* Bosilganda kichrayish effekti */
+}
+
+/* FOOTER NAVIGATSIYA (footernav) */
+.footernav {
+    text-align: center;
+}
+
+.footernav__container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+
+.footernav .logo {
+    font-size: 2rem;
+    font-weight: bold;
+    color: #fff;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.footernav .logo:hover {
+    color: #ff6f61;
+}
+
+.footernav .nav__links {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    list-style: none; /* Nuqtalarni olib tashlash */
+    padding: 0;
+}
+
+/* Kulrang linklar va animatsiya */
+.footernav .nav__links li a {
+    color: rgba(255, 255, 255, 0.5); /* Kulrangroq rang */
+    text-decoration: none;
+    font-size: 1.1rem;
+    padding: 5px 10px;
+    position: relative;
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.footernav .nav__links li a:hover {
+    color: #fff; /* Hoverda oq rang */
+    transform: translateY(-3px); /* Tepaga ko'tarish animatsiyasi */
+}
+
+/* Bosilganda (active) animatsiya */
+.footernav .nav__links li a:active {
+    color: #ff6f61; /* Bosilganda rangni o'zgartirish */
+    transform: translateY(0);
+    transition: none;
+}
+
+/* =================================== */
+/* RESPONSIVE DESIGN (MOBIL UCHUN) */
+/* =================================== */
+
+@media (min-width: 768px) {
+    .footer__container {
+        flex-direction: row;
+        justify-content: space-around;
+        align-items: flex-start;
+    }
+    .footernav__container {
+        flex-direction: row;
+        justify-content: space-between;
+        width: 100%;
+        max-width: 500px;
+    }
+}
+@media (max-width: 600px) {
+    .footer {
+        padding: 60px 0 30px;
+    }
+    .email-form {
+        flex-direction: column;
+    }
+    .input-group {
+        max-width: 90%;
+    }
+    .submit-btn {
+        width: 90%;
+    }
+    .footernav .nav__links {
+        flex-direction: column;
+        gap: 10px;
+    }
+}
 
 
 
@@ -631,7 +901,7 @@ button:hover {
         /* markazga */
         align-items    : center;
         gap            : 40px;
-  flex-wrap: wrap;
+        flex-wrap      : wrap;
 
     }
 }
@@ -644,13 +914,14 @@ button:hover {
     .menu__icon {
         display: flex;
     }
-        .cards {
+
+    .cards {
         display        : flex;
         justify-content: center;
         /* markazga */
         align-items    : center;
         gap            : 40px;
-  flex-wrap: wrap;
+        flex-wrap      : wrap;
 
     }
 }
@@ -663,12 +934,15 @@ button:hover {
     .navigation {
         padding: 20px 40px;
     }
+
     .hero .content h1 {
         font-size: 56px;
     }
+
     .hero .content p {
         font-size: 20px;
     }
+
     .cards {
         gap: 20px;
     }
@@ -678,42 +952,54 @@ button:hover {
     .navigation {
         padding: 20px 20px;
     }
+
     .nav__links {
         display: none;
     }
+
     .menu__icon {
         display: flex;
     }
+
     .hero .swiper-button-prev,
     .hero .swiper-button-next {
-        width: 36px;
+        width : 36px;
         height: 36px;
     }
+
     .hero .swiper-button-prev::after,
     .hero .swiper-button-next::after {
         font-size: 16px;
     }
+
     .hero .content h1 {
-        font-size: 40px;
+        font-size    : 40px;
         margin-bottom: 15px;
     }
+
     .hero .content p {
         font-size: 18px;
     }
+
     .cards {
         flex-direction: column;
-        align-items: center;
-        gap: 30px;
+        align-items   : center;
+        gap           : 30px;
     }
+
     .card {
         max-width: 90%;
     }
+
     .recent {
         justify-content: center;
     }
+
     .recent__card {
-        width: 100%;
-        max-width: 400px;
+        width        : 200px;
+        border-radius: 10px;
+        overflow     : hidden;
+        position     : relative;
     }
 }
 
@@ -721,23 +1007,30 @@ button:hover {
     .hero {
         max-height: 600px;
     }
+
     .hero .swiper-slide img {
         height: 600px;
     }
+
     .hero .content h1 {
         font-size: 32px;
     }
+
     .hero .content p {
         font-size: 16px;
     }
+
     button {
-        padding: 12px 30px;
+        padding  : 12px 30px;
         font-size: 16px;
     }
+
     .recent__card {
         max-width: 90%;
     }
+
     .aside .scrolling-text {
-        animation-duration: 10s; /* Kichik ekranlarda tezroq aylanish */
+        animation-duration: 10s;
+        /* Kichik ekranlarda tezroq aylanish */
     }
 }

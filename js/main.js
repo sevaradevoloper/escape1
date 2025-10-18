@@ -55,3 +55,42 @@ recentSliders.forEach(function(swiperElement) {
         },
     });
 });
+
+
+
+
+
+
+
+
+document.addEventListener('DOMContentLoaded', () => {
+    const emailInput = document.querySelector('.email-input');
+    const footerBg = document.querySelector('.footer-bg');
+
+    // Inputga fokus bo'lganda fonni blur qilish
+    if (emailInput && footerBg) {
+        emailInput.addEventListener('focus', () => {
+            footerBg.classList.add('blurred');
+        });
+
+        emailInput.addEventListener('blur', () => {
+            footerBg.classList.remove('blurred');
+        });
+    }
+
+    // Input to'liq bo'lmaganda labelni saqlash (CSS da ham bor, lekin JS yordamida ishonchliroq)
+    const handleInput = () => {
+        const label = emailInput.nextElementSibling; // label - inputdan keyingi element
+        if (emailInput.value.length > 0) {
+            emailInput.classList.add('has-content');
+        } else {
+            emailInput.classList.remove('has-content');
+        }
+    };
+    
+    // Yana bir tekshirish uchun: agar sayt yuklanganda input to'liq bo'lsa
+    if(emailInput) {
+        handleInput(); 
+        emailInput.addEventListener('input', handleInput);
+    }
+});

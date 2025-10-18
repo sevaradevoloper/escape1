@@ -17,10 +17,10 @@
             <div class="navigation__container">
                 <div class="logos"><a class="logo" href="#">Escape.</a></div>
                 <ul class="nav__links">
-                    <li><a href="#">Home</a></li>
-                    <li><a href="#">Categories</a></li>
-                    <li><a href="#">About</a></li>
-                    <li><a href="#">Contact</a></li>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#categories">Categories</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#contact">Contact</a></li>
                 </ul>
                 <div class="menu__icon">
                     <span></span>
@@ -52,7 +52,7 @@
         <div class="swiper-button-prev hero__prev"></div>
         <div class="swiper-button-next hero__next"></div>
 
-        <div class="content">
+        <div class="content" id="home">
             <h1 id="hero-title">Let's do it together.</h1>
             <div class="line"></div>
             <p id="hero-text">We travel the world in search of stories. Come along for the ride.</p>
@@ -60,8 +60,8 @@
         </div>
     </section>
 
-   
-    
+
+
 
     <aside class="aside">
         <div class="scrolling-text">
@@ -81,8 +81,8 @@
     </aside>
 
 
-<main class="main">
-        <section class="section">
+    <main class="main">
+        <section class="section" id="about">
             <div class="container">
                 <div class="section__container">
                     <h2>Featured Posts</h2>
@@ -125,7 +125,7 @@
             </div>
             </div>
         </section>
-        <section class="testimonials">
+        <section class="testimonials" id="categories">
             <div class="container">
                 <div class="testimonials__container">
                     <h2>Most Recent</h2>
@@ -144,7 +144,7 @@
                                 <!-- Tugmalar -->
                                 <div class="swiper-button-prev"></div>
                                 <div class="swiper-button-next"></div>
-<div class="testimon">
+                                <div class="testimon">
                                     <h3>Still Standing Tall</h3>
                                     <p>Life begins at the end of your comfort zone.</p>
                                     <div class="day-person">
@@ -184,7 +184,7 @@
                         </div>
 
 
-<!-- shu tarzda jami 6 ta bo‘ladi -->
+                        <!-- shu tarzda jami 6 ta bo‘ladi -->
                         <div class="recent__card">
                             <div class="card__image swiper">
                                 <div class="swiper-wrapper">
@@ -245,7 +245,7 @@
                                     <h3>Peaceful Lake</h3>
 
 
-<p>Calm moments make the best memories.</p>
+                                    <p>Calm moments make the best memories.</p>
                                     <div class="day-person">
                                         <div class="person">
                                             <img src="https://i.pravatar.cc/26?img=2" alt="avatar">
@@ -284,12 +284,37 @@
             </div>
         </section>
     </main>
-
-
-
+   <footer class="footer" id="main-footer">
+    <div class="footer-bg"></div> <div class="container">
+        <div class="footer__container">
+            <article class="contact">
+                <h3>Stay in Touch</h3>
+                <div class="line"></div>
+                <form action="#" class="email-form"> <div class="input-group"> <label for="email">Enter your email address</label>
+                        <input type="email" id="email" class="email-input">
+                    </div>
+                    <button type="submit" class="submit-btn">Submit</button> </form>
+            </article>
+            <footer>
+                <nav class="footernav" id="contact">
+                    <div class="container">
+                        <div class="footernav__container">
+                            <div class="logos"><a class="logo" href="#">Escape.</a></div>
+                            <ul class="nav__links">
+                                <li><a href="#home">Home</a></li>
+                                <li><a href="#categories">Categories</a></li>
+                                <li><a href="#about">About</a></li>
+                                <li><a href="#contact">Contact</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </nav>
+            </footer>
+        </div>
+    </div>
+</footer>
 
     <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
     <script src="./js/main.js"></script>
 </body>
-
 </html>

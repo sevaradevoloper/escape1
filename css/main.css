@@ -551,11 +551,29 @@ button:hover {
     border-radius: 10px;
 }
 
-/* swiper tugmalari */
+/* Swiper tugmalarining asosiy joylashuvi va rangi */
 .swiper-button-prev,
 .swiper-button-next {
-    color     : #DD783F;
+    color: #DD783F; /* Tugma rangini saqlaymiz */
     transition: 0.3s ease;
+    /* Bu joyda width/height ishlamaydi */
+}
+
+/* 🚀 Tugma ikonkasining haqiqiy hajmini o'zgartirish */
+.swiper-button-prev::after,
+.swiper-button-next::after {
+    content: ''; /* Tugmaning ichki kontentini saqlash */
+    font-size: 20px; /* Masalan, 20px gacha kattalashtiramiz */
+    /* Agar bu ishlamasa, tugmaning o'ziga padding berish kerak: */
+}
+
+/* 💡 Alternativ: Tugmaning urish joyini (hit area) kattalashtirish */
+.swiper-button-prev,
+.swiper-button-next {
+    width: 30px; /* Tugma uchun ko'proq joy ochish */
+    height: 30px;
+    margin: -15px 0 0 0; /* Vertikal joylashuvini markazga qaytarish uchun */
+    top: 50%;
 }
 
 .swiper-button-prev:hover,
@@ -779,10 +797,18 @@ button:hover {
 .footernav {
     text-align: center;
 }
-.footer__container{
-    display: flex;
-    
-}
+   .footer__container {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        display: flex;
+    }
+    .footernav__container {
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+        max-width: 500px;
+    }
 .footernav__container {
     display: flex;
     flex-direction: column;
@@ -917,7 +943,47 @@ button:hover {
     height: 50px;
 }
 
+/* Asosiy footer konteynerini optimallashtirish: Barcha elementlar (form va navigatsiya) ustma-ust, markazda turishi kerak. */
+.footer__container {
+    display: flex;
+    flex-direction: column; /* Elementlarni ustma-ust qo'yadi */
+    justify-content: center;
+    align-items: center; /* Gorizontal markazlashtirish */
+    gap: 50px; /* Artikllar orasidagi bo'shliqni ta'minlaydi */
+}
 
+/* Navigatsiya joylashuvini qayta sozlash */
+.footernav {
+    width: 100%; /* Kenglikni to'ldirish */
+}
+
+
+.footernav__container {
+    /* ... avvalgi stillar (display, flex-direction, align-items, gap) */
+    
+    /* YENGIL BLUR FONI UCHUN STIL */
+    background-color: rgba(0, 0, 0, 0.3); /* Yengil shaffof qora fon */
+    backdrop-filter: blur(5px); /* Orqa fonni blur qiladi */
+    -webkit-backdrop-filter: blur(5px); /* Safari uchun */
+    
+    padding: 20px;
+    border-radius: 10px;
+    
+    /* Mobil uchun */
+    width: 90%; 
+    max-width: 500px;
+    margin: 0 auto;
+}
+
+/* Katta ekranlar uchun (768px da navigatsiyani yonma-yon qilishni saqlaymiz) */
+@media (min-width: 768px) {
+    .footernav__container {
+        flex-direction: row;
+        justify-content: space-between;
+        width: 100%;
+        max-width: 800px; /* Kengligini biroz oshirish mumkin */
+    }
+}
 
 
 
